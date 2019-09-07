@@ -30,13 +30,18 @@
     
    
     <div class="page-links">
-      <h2 class="page-links__title"><a href="#">About Us</a></h2>
+      <h2 class="page-links__title"><a href="<?php get_permalink($theParent); ?> " > <?php echo get_the_title($theParent); ?></a></h2>
       <ul class="min-list">
         <li class="current_page_item"><a href="#">Our History</a></li>
         <?php 
+        if($theParent) {
+          $findChildrenOf = $theParent;
+        } else {
+          $findChildrenOf = get_the_ID();
+        }
           wp_list_pages(array(
             'title_li' => NULL,
-            'child_of' => get_page_id $this,
+            'child_of' => $findChildrenOf
           ));
         ?>
       </ul>
