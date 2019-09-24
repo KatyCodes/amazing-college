@@ -55,6 +55,8 @@ wp-content/*
 !wp-content/mu-plugins/
 !wp-content/plugins/
 !wp-content/themes/
+ 
+wp-config.php
 
 # ignore these plugins from the core
 wp-content/plugins/hello.php
