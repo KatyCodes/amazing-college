@@ -2203,7 +2203,7 @@ body.admin-bar .search-overlay {
 
 
 .headline--large {
-    color: green;
+    
     font-size: 3.6rem;
   }
 
@@ -2635,3 +2635,4 @@ margin: 20px 0;
     border-bottom: none;
     margin-bottom: 0;
   }
+
