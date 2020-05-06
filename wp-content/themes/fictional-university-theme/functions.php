@@ -17,7 +17,6 @@ function university_features() {
 add_action('after_setup_theme', 'university_features');
 
 function university_adjust_queries($query){
-    //this will make sure we're not excluding archived posts in the admin side
     if(!is_admin() AND is_post_type_archive('event') AND $query->is_main_query()) {
         $today =date('Ymd');
         $query->set('meta-key', 'event_date');
